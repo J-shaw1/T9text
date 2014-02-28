@@ -1,5 +1,6 @@
 package predictive;
 
+import java.util.Map;
 import java.util.TreeMap;
 
 /**
@@ -12,8 +13,8 @@ import java.util.TreeMap;
  */
 public class ValueMaps {
 
-	private TreeMap<Integer, char[]> numToLetters = new TreeMap<Integer, char[]>();
-	private TreeMap<Character, Integer> letterToNum = new TreeMap<Character, Integer>();
+	private Map<Integer, char[]> numToLetters = new TreeMap<Integer, char[]>();
+	private Map<Character, Integer> letterToNum = new TreeMap<Character, Integer>();
 
 	/**
 	 * Sets up the two value maps for going from a number to and letter and visa
@@ -102,7 +103,7 @@ public class ValueMaps {
 	 * 
 	 * @return The tree map numToLetters
 	 */
-	public TreeMap<Integer, char[]> getNumToLetters() {
+	public Map<Integer, char[]> getNumToLetters() {
 		return numToLetters;
 	}
 
@@ -111,7 +112,7 @@ public class ValueMaps {
 	 * 
 	 * @return The tree map letterToNum
 	 */
-	public TreeMap<Character, Integer> getLetterToNum() {
+	public Map<Character, Integer> getLetterToNum() {
 		return letterToNum;
 	}
 

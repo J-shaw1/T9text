@@ -1,5 +1,9 @@
 package predictive;
 
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
 /**
  * A prototype for using T9 predictive text
  * 
@@ -33,4 +37,21 @@ public class PredictivePrototype {
 		}
 		return numString.toString();
 	}
+
+	public static Set<String> signatureToWords(String signature) {
+
+		Dictionary dict = new Dictionary();
+		Map<Integer, TreeSet<String>> table = dict.getWordTable();
+
+		TreeSet<String> wordsSameLength = table.get(signature.length());
+
+		for (int i = 0; i < signature.length(); i++) {
+			char[] number = valueMaps.getNumToLettersValue(signature.charAt(i));
+			
+			
+		}
+
+		return null;
+	}
+
 }

@@ -1,147 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="17" passed="17">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1858" started-at="2014-02-28T00:49:54Z" finished-at="2014-02-28T00:49:56Z">
+  <suite name="Default suite" duration-ms="283" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1858" started-at="2014-02-28T00:49:54Z" finished-at="2014-02-28T00:49:56Z">
-      <class name="bstexercise.testing">
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="6" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="biggerTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="biggerTest" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- biggerTest -->
-        <test-method status="PASS" signature="delete2Test()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="delete2Test" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- delete2Test -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="deleteLargestTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="deleteLargestTest" duration-ms="1" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteLargestTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="1" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="deleteSmallestTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="deleteSmallestTest" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteSmallestTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="deleteTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="deleteTest" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="findTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="findTest" duration-ms="1" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- findTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="1" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="hasTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="hasTest" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- hasTest -->
-        <test-method status="PASS" signature="heightTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="heightTest" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- heightTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="insertTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="insertTest" duration-ms="1" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- insertTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="isEmptyTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="isEmptyTest" duration-ms="1" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- isEmptyTest -->
-        <test-method status="PASS" signature="largestTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="largestTest" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- largestTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="saveInOrderTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="saveInOrderTest" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- saveInOrderTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="sizeTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="sizeTest" duration-ms="1" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sizeTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="1" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="smallerTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="smallerTest" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- smallerTest -->
-        <test-method status="PASS" signature="smallestTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="smallestTest" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- smallestTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="setup" is-config="true" duration-ms="1" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="toStringTest()[pri:0, instance:bstexercise.testing@4d1d54a5]" name="toStringTest" duration-ms="0" started-at="2014-02-28T00:49:56Z" finished-at="2014-02-28T00:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- toStringTest -->
-      </class> <!-- bstexercise.testing -->
+    <test name="Default test" duration-ms="283" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
       <class name="predictive.testPredictivePrototype">
-        <test-method status="PASS" signature="setup()[pri:0, instance:predictive.testPredictivePrototype@759a2097]" name="setup" is-config="true" duration-ms="4" started-at="2014-02-28T00:49:54Z" finished-at="2014-02-28T00:49:54Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:predictive.testPredictivePrototype@52988584]" name="setup" is-config="true" duration-ms="4" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testWordToSignature()[pri:0, instance:predictive.testPredictivePrototype@759a2097]" name="testWordToSignature" duration-ms="1816" started-at="2014-02-28T00:49:54Z" finished-at="2014-02-28T00:49:56Z">
+        <test-method status="PASS" signature="testSignatureToWords()[pri:0, instance:predictive.testPredictivePrototype@52988584]" name="testSignatureToWords" duration-ms="266" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignatureToWords -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:predictive.testPredictivePrototype@52988584]" name="setup" is-config="true" duration-ms="1" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testWordToSignature()[pri:0, instance:predictive.testPredictivePrototype@52988584]" name="testWordToSignature" duration-ms="2" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWordToSignature -->
