@@ -5,7 +5,7 @@
     <classes>
       <class name="predictive.testPredictivePrototype">
         <methods>
-          <include name="testSignatureToWords"/>
+          <include name="testTrieSignatureToWord"/>
           <include name="setup"/>
         </methods>
       </class> <!-- predictive.testPredictivePrototype -->

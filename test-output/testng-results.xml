@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="283" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
+  <suite name="Default suite" duration-ms="13678" started-at="2014-03-01T18:13:49Z" finished-at="2014-03-01T18:14:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="283" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
+    <test name="Default test" duration-ms="13678" started-at="2014-03-01T18:13:49Z" finished-at="2014-03-01T18:14:02Z">
       <class name="predictive.testPredictivePrototype">
-        <test-method status="PASS" signature="setup()[pri:0, instance:predictive.testPredictivePrototype@52988584]" name="setup" is-config="true" duration-ms="4" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:predictive.testPredictivePrototype@370ae6fc]" name="setup" is-config="true" duration-ms="6" started-at="2014-03-01T18:13:49Z" finished-at="2014-03-01T18:13:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testSignatureToWords()[pri:0, instance:predictive.testPredictivePrototype@52988584]" name="testSignatureToWords" duration-ms="266" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
+        <test-method status="PASS" signature="testSignatureToWord()[pri:0, instance:predictive.testPredictivePrototype@370ae6fc]" name="testSignatureToWord" duration-ms="13659" started-at="2014-03-01T18:13:49Z" finished-at="2014-03-01T18:14:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSignatureToWords -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:predictive.testPredictivePrototype@52988584]" name="setup" is-config="true" duration-ms="1" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
+        </test-method> <!-- testSignatureToWord -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:predictive.testPredictivePrototype@370ae6fc]" name="setup" is-config="true" duration-ms="1" started-at="2014-03-01T18:14:02Z" finished-at="2014-03-01T18:14:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testWordToSignature()[pri:0, instance:predictive.testPredictivePrototype@52988584]" name="testWordToSignature" duration-ms="2" started-at="2014-02-28T22:46:27Z" finished-at="2014-02-28T22:46:27Z">
+        <test-method status="PASS" signature="testWordToSignature()[pri:0, instance:predictive.testPredictivePrototype@370ae6fc]" name="testWordToSignature" duration-ms="1" started-at="2014-03-01T18:14:02Z" finished-at="2014-03-01T18:14:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWordToSignature -->

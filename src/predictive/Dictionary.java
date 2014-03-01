@@ -15,8 +15,8 @@ public class Dictionary {
 		ourFile = openFile();
 
 		wordTable = readWords();
-		
-		//printTable(wordTable);
+
+		// printTable(wordTable);
 	}
 
 	private BufferedReader openFile() {
@@ -43,7 +43,7 @@ public class Dictionary {
 			for (String word = ourFile.readLine(); word != null; word = ourFile
 					.readLine()) {
 
-				//Code to put key and value into the tree
+				// Code to put key and value into the tree
 				int key = word.length();
 				if (table.get(key) == null) {
 					table.put(key, new TreeSet<String>());
@@ -66,10 +66,10 @@ public class Dictionary {
 		return table;
 	}
 
-	public Map<Integer, TreeSet<String>> getWordTable(){
+	public Map<Integer, TreeSet<String>> getWordTable() {
 		return wordTable;
 	}
-	
+
 	public void printTable(Map<Integer, TreeSet<String>> table) { // Word list
 		// successfully read and stored:
 
@@ -82,5 +82,5 @@ public class Dictionary {
 				System.out.println(s);
 		}
 	}
-	
+
 }

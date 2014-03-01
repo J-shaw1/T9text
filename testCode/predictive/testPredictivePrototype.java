@@ -14,7 +14,7 @@ public class testPredictivePrototype {
 
 	public void testWordToSignature() {
 
-		// for(int i = 0; i < 5000000; i++) {
+		//for(int i = 0; i < 5000000; i++) {
 		assertEquals("843", PredictivePrototype.wordToSignature("The"));
 		assertEquals("78425", PredictivePrototype.wordToSignature("quick"));
 		assertEquals("27696", PredictivePrototype.wordToSignature("brown"));
@@ -24,12 +24,21 @@ public class testPredictivePrototype {
 		assertEquals("843", PredictivePrototype.wordToSignature("the"));
 		assertEquals("5299", PredictivePrototype.wordToSignature("lazy"));
 		assertEquals("364", PredictivePrototype.wordToSignature("dog"));
-		// }
-	}
-
-	
-	public void testSignatureToWords(){
-		PredictivePrototype.signatureToWords("Hello");
+		//}
 	}
 	
+	public void testSignatureToWord() {
+		
+		for(int i = 0; i < 10; i++) {
+		assertEquals(true,PredictivePrototype.signatureToWords("843").contains("the"));
+		assertEquals(true,PredictivePrototype.signatureToWords("78425").contains("quick"));
+		assertEquals(true,PredictivePrototype.signatureToWords("27696").contains("brown"));
+		assertEquals(true,PredictivePrototype.signatureToWords("369").contains("fox"));
+		assertEquals(true,PredictivePrototype.signatureToWords("58677").contains("jumps"));
+		assertEquals(true,PredictivePrototype.signatureToWords("6837").contains("over"));
+		assertEquals(true,PredictivePrototype.signatureToWords("843").contains("the"));
+		assertEquals(true,PredictivePrototype.signatureToWords("5299").contains("lazy"));
+		assertEquals(true,PredictivePrototype.signatureToWords("364").contains("dog"));
+		}
+	}
 }
