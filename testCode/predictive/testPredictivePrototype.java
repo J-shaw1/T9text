@@ -14,7 +14,7 @@ public class testPredictivePrototype {
 
 	public void testWordToSignature() {
 
-		//for(int i = 0; i < 5000000; i++) {
+		for(int i = 0; i < 1000000; i++) {
 		assertEquals("843", PredictivePrototype.wordToSignature("The"));
 		assertEquals("78425", PredictivePrototype.wordToSignature("quick"));
 		assertEquals("27696", PredictivePrototype.wordToSignature("brown"));
@@ -24,7 +24,7 @@ public class testPredictivePrototype {
 		assertEquals("843", PredictivePrototype.wordToSignature("the"));
 		assertEquals("5299", PredictivePrototype.wordToSignature("lazy"));
 		assertEquals("364", PredictivePrototype.wordToSignature("dog"));
-		//}
+		}
 	}
 	
 	public void testSignatureToWord() {

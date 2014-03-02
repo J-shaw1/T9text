@@ -37,7 +37,7 @@ public class Dictionary {
 
 	private Map<Integer, TreeSet<String>> readWords() {
 
-		Map<Integer, TreeSet<String>> table = new TreeMap<Integer, TreeSet<String>>();
+		Map<Integer, TreeSet<String>> table = new HashMap<Integer, TreeSet<String>>();
 
 		try {
 			for (String word = ourFile.readLine(); word != null; word = ourFile

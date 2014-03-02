@@ -16,7 +16,9 @@ public class PredictivePrototype {
 
 	/**
 	 * Converts a given string to the corresponding key pad numbers on a mobile
-	 * phone
+	 * phone. It was better to use StringBuffer as String are immutable, whereas
+	 * StringBuffers are not and given we need to constantly append it was
+	 * better to use StringBuffer.
 	 * 
 	 * @param word
 	 *            The word you wish to convert
@@ -40,15 +42,18 @@ public class PredictivePrototype {
 	}
 
 	/**
-	 * Converts a number signature of a word to a list of possible words that the signature could be
-	 * @param signature The signature to convert
+	 * Converts a number signature of a word to a list of possible words that
+	 * the signature could be
+	 * 
+	 * @param signature
+	 *            The signature to convert
 	 * @return The list of possible words the string could be
 	 */
 	public static Set<String> signatureToWords(String signature) {
 
-		//Convert the string to lowercase
+		// Convert the string to lowercase
 		signature.toLowerCase();
-		
+
 		Dictionary dict = new Dictionary();
 		Map<Integer, TreeSet<String>> table = dict.getWordTable();
 
@@ -83,8 +88,11 @@ public class PredictivePrototype {
 
 	/**
 	 * Test if a char array contains contains a given to character
-	 * @param charArray The char array to test
-	 * @param c The character to test if it is in the array
+	 * 
+	 * @param charArray
+	 *            The char array to test
+	 * @param c
+	 *            The character to test if it is in the array
 	 * @return TRUE if the array contains the char, FALSE if it does not
 	 */
 	private static boolean arrayContainsChar(char[] charArray, char c) {
