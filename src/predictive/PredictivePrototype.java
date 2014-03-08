@@ -1,9 +1,12 @@
 package predictive;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * A prototype for using T9 predictive text
@@ -53,14 +56,24 @@ public class PredictivePrototype {
 
 		// Convert the string to lowercase
 		signature.toLowerCase();
-
-		Dictionary dict = new Dictionary();
-		Map<Integer, TreeSet<String>> table = dict.getWordTable();
-
-		TreeSet<String> wordsSameLength = table.get(signature.length());
+		
+		
+		//Create a new dictionaryStore
+		//DictionaryStore dict = new DictionaryStore();
+		Dictionary<WordSig> dict = new DictionaryListImp1();
+		//Make a new words table
+		//Map<String, HashSet<String>> table = dict.getWordTable();
+		List<WordSig> table = dict.getWordTable();
+		int i = Collections.binarySearch(table, "43556");
+		
+		
+		
+		return null;
+		/*
+		HashSet<String> wordsSameLength = table.get(String.valueOf(signature.length()));
 
 		for (Iterator<String> iter = wordsSameLength.iterator(); iter.hasNext();) {
-
+		
 			boolean removeString = false;
 
 			String s = iter.next();
@@ -84,6 +97,7 @@ public class PredictivePrototype {
 
 		}
 		return wordsSameLength;
+		*/
 	}
 
 	/**
