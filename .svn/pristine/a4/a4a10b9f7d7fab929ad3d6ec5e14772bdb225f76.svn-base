@@ -1,0 +1,97 @@
+package predictivegui;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Observable;
+
+import predictive.Dictionary;
+
+public class PredictiveModel extends Observable {
+
+	private Dictionary model;
+	private Collection<String> words;
+	private Iterator<String> i;
+	private String currentWord;
+	private String currentMessage;
+	private String workingSig = new String();
+
+	/**
+	 * Creates the dictionary model from an Dictionary type
+	 * 
+	 * @param model
+	 *            The Dictionary type to read the word from.
+	 */
+	public PredictiveModel(Dictionary model) {
+		super();
+		this.model = model;
+		currentMessage = new String();
+	}
+
+	/**
+	 * Gets the words related to a given signature, the words will be trimmed
+	 * 
+	 * @param sig
+	 *            The words to get the signature for.
+	 */
+	public void getWordsFromSig() {
+		words = model.signatureToWords(workingSig);
+		setupIterator();
+		nextWord();
+		setChanged();
+		notifyObservers();
+	}
+
+	/**
+	 * Sets the current word to the next one in the list
+	 */
+	public void nextWord() {
+		//Might be able to get rid of this if iterator goes back to the start
+		if (i.hasNext()) {
+			currentWord = i.next();
+		} else {
+			setupIterator();
+			if (i.hasNext())
+				currentWord = i.next();
+		}
+		setChanged();
+		notifyObservers();
+	}
+
+	private void setupIterator() {
+		i = words.iterator();
+	}
+
+	/**
+	 * Gets the current word
+	 * 
+	 * @return Current word
+	 */
+	public String getCurrentWord() {
+		return currentWord;
+	}
+
+	public void addSigChar(int k) {
+		workingSig += String.valueOf(k);
+		getWordsFromSig();
+	}
+
+	public String getWorkingSig() {
+		return workingSig;
+	}
+
+	public void newWord() {
+		currentWord += " ";
+		currentMessage += currentWord;
+		currentWord = new String();
+		workingSig = new String();
+		setupIterator();
+		setChanged();
+		notifyObservers();
+		
+	}
+
+	public String getMessage() {
+		return currentMessage;
+	}
+
+}

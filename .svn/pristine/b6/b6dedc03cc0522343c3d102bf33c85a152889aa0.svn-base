@@ -1,0 +1,11 @@
+package wordTree;
+
+public class WordNotFoundException extends Exception {
+	public WordNotFoundException(){
+		super();
+	}
+	public WordNotFoundException(String s){
+		super(s);
+	}
+	
+}

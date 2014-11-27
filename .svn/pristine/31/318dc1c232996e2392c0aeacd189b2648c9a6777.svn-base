@@ -1,0 +1,43 @@
+package predictivegui;
+
+import java.util.Observable;
+import java.util.Observer;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+/**
+ * Represents a label, like the phone screen
+ * @author jgs328
+ *
+ */
+@SuppressWarnings("serial")
+public class TextFeild extends JPanel implements Observer {
+
+	private PredictiveModel model;
+	private JLabel label;
+
+	/**
+	 * Constructor to set up the model, and create the label
+	 * @param model
+	 */
+	public TextFeild(PredictiveModel model) {
+		super();
+		this.model = model;
+		label = new JLabel();
+		//JTextArea
+		add(label);
+
+	}
+
+	/**
+	 * States how to update this, gets the current whole message and appends that to the current word
+	 * @param arg0 The observable
+	 * @param arg1 An object
+	 */
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		label.setText(model.getMessage() + model.getCurrentWord());
+	}
+
+}

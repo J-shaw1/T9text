@@ -1,0 +1,34 @@
+package predictive;
+
+import java.util.Collection;
+
+/**
+ * An interface for the dictionary, contains the file path for the dictionary which can be access statically
+ * @author Joe
+ *
+ */
+public interface Dictionary {
+	
+	//CS lab
+	
+	//PC
+	//public static final String dictionaryPath = "C:\\Users\\Joe\\Documents\\GitHub\\T9text\\src\\predictive\\words.txt";
+	
+	//Laptop
+	public static final String dictionaryPath = "C:\\Users\\Joe\\workspace\\T9text\\src\\predictive\\words.txt";
+	
+	
+	/**
+	 * Converts a given word to its signature
+	 * @param word The word to convert
+	 * @return Signature of a the word, given as a string but will be integers
+	 */
+	public String wordToSignature(String word);
+	
+	/**
+	 * Converts a word signature to a list of possible word found in the dictionary
+	 * @param signature The signature to convert
+	 * @return A list of word with the given signature, the type of the list does not matter
+	 */
+	public Collection<String> signatureToWords(String signature);
+}

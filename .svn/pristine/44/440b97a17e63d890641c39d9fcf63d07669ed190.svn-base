@@ -1,0 +1,47 @@
+package predictive;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import static org.testng.AssertJUnit.assertEquals;
+
+@Test
+public class TestDictionaryListImpl {
+
+	private Dictionary test;
+	
+	@BeforeTest
+	public void setup() {
+		test = new DictionaryListImpl();
+	}
+
+	public void testWordToSignature() {
+		
+		//for(int i = 0; i < 1000000; i++) {
+		assertEquals("843", test.wordToSignature("The"));
+		assertEquals("78425", test.wordToSignature("quick"));
+		assertEquals("27696", test.wordToSignature("brown"));
+		assertEquals("369", test.wordToSignature("fox"));
+		assertEquals("58677", test.wordToSignature("jumps"));
+		assertEquals("6837", test.wordToSignature("over"));
+		assertEquals("843", test.wordToSignature("the"));
+		assertEquals("5299", test.wordToSignature("lazy"));
+		assertEquals("364", test.wordToSignature("dog"));
+		//}
+	}
+	
+	public void testSignatureToWord() {
+		
+		for(int i = 0; i < 1000000; i++) {
+		assertEquals(true,test.signatureToWords("843").contains("the"));
+		assertEquals(true,test.signatureToWords("78425").contains("quick"));
+		assertEquals(true,test.signatureToWords("27696").contains("brown"));
+		assertEquals(true,test.signatureToWords("369").contains("fox"));
+		assertEquals(true,test.signatureToWords("58677").contains("jumps"));
+		assertEquals(true,test.signatureToWords("6837").contains("over"));
+		assertEquals(true,test.signatureToWords("843").contains("the"));
+		assertEquals(true,test.signatureToWords("5299").contains("lazy"));
+		assertEquals(true,test.signatureToWords("364").contains("dog"));
+		}
+	}
+}

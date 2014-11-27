@@ -1,0 +1,66 @@
+package predictivegui;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Observable;
+import predictive.Dictionary;
+
+public class PredictiveModel extends Observable {
+
+	private Dictionary model;
+	private Collection<String> words;
+	private Iterator<String> i;
+	private String currentWord;
+
+	/**
+	 * Creates the dictionary model from an Dictionary type
+	 * 
+	 * @param model
+	 *            The Dictionary type to read the word from.
+	 */
+	public PredictiveModel(Dictionary model) {
+		super();
+		this.model = model;
+	}
+
+	/**
+	 * Gets the words related to a given signature, the words will be trimmed
+	 * 
+	 * @param sig
+	 *            The words to get the signature for.
+	 */
+	public void getWordsFromSig(String sig) {
+		words = model.signatureToWords(sig);
+		setupIterator();
+		nextWord();
+		setChanged();
+		notifyObservers();
+	}
+
+	/**
+	 * Sets the current word to the next one in the list
+	 */
+	public void nextWord() {
+		//Might be able to get rid of this if iterator goes back to the start
+		if (i.hasNext()) {
+			currentWord = i.next();
+		} else {
+			setupIterator();
+		}
+
+	}
+
+	private void setupIterator() {
+		i = words.iterator();
+	}
+
+	/**
+	 * Gets the current word
+	 * 
+	 * @return Current word
+	 */
+	public String getCurrentWord() {
+		return currentWord;
+	}
+
+}

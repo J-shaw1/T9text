@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="predictive.testPredictivePrototype">
+      <class name="predictive.TestDictionaryTreeImpl">
         <methods>
+          <include name="testWordToSignature"/>
           <include name="testSignatureToWord"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- predictive.testPredictivePrototype -->
+      </class> <!-- predictive.TestDictionaryTreeImpl -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,13 @@
+package wordTree;
+
+import predictive.DictionaryTreeImpl;
+
+public class TestSetup {
+
+	public static void main(String[] args) {
+		DictionaryTreeImpl test = new DictionaryTreeImpl();
+		//System.out.println(MainNode.trimWords(test.signatureToWords("43556")));
+		System.out.println(test.signatureToWords("43556"));
+	}
+
+}

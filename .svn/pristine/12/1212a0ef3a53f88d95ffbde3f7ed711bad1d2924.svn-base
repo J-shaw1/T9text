@@ -1,0 +1,26 @@
+package predictivegui;
+
+import java.util.Observable;
+import java.util.Observer;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class TextFeild extends JPanel implements Observer {
+
+	private PredictiveModel model;
+	private JLabel label;
+
+	public TextFeild(PredictiveModel model) {
+		this.model = model;
+
+		label = new JLabel();
+		add(label);
+
+	}
+
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		label.setText(model.getMessage() + model.getCurrentWord());
+	}
+
+}

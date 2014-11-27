@@ -1,0 +1,41 @@
+package predictivegui;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JPanel;
+
+import predictive.Dictionary;
+
+/**
+ * Ties all the GUI aspects together
+ * @author jgs328
+ *
+ */
+@SuppressWarnings("serial")
+public class PredictiveComponent extends JPanel{
+
+	/**
+	 * Constructor the tie everything together
+	 * @param dict A dictionary type object to use in the model
+	 */
+	public PredictiveComponent(Dictionary dict) {
+		super();
+		
+		PredictiveModel model = new PredictiveModel(dict);
+		
+		TextField textFeild = new TextField(model);
+		
+		model.addObserver(textFeild);
+		
+		PhoneButtons buttons = new PhoneButtons(model);
+		
+		setLayout(new BorderLayout());
+		
+		add(textFeild, BorderLayout.CENTER);
+		add(buttons, BorderLayout.SOUTH);
+		
+	}
+	
+	
+	
+}

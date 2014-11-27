@@ -1,0 +1,21 @@
+package predictivegui;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class ButtonListener implements ActionListener {
+
+	private PredictiveModel model;
+	private int sig;
+
+	public ButtonListener(int k, PredictiveModel model) {
+		this.model = model;
+		this.sig = k;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		model.addSigChar(sig);
+	}
+
+}

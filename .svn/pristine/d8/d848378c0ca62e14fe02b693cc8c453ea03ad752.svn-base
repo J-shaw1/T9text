@@ -1,0 +1,129 @@
+package wordTree;
+
+import java.util.Collection;
+import java.util.HashSet;
+import predictive.ValueMaps;
+
+/**
+ * The main class for representing the dictionary as a tree
+ * @author jgs328
+ */
+public class MainNode {
+
+	// Array of children
+	private MainNode[] children = new MainNode[8];
+
+	// Node depth
+	private final int nodeDepth;
+
+	// List of words
+	Collection<String> words = new HashSet<String>();
+
+	/**
+	 * Constructor to create a new blank tree, only used when creating the main
+	 * root node
+	 */
+	public MainNode() {
+		this.nodeDepth = 0;
+	}
+
+	/**
+	 * Constructor when creating children nodes, should never be called by a
+	 * user and only be this class
+	 * 
+	 * @param nodeDepth
+	 *            The depth of the node you are creating
+	 */
+	protected MainNode(int nodeDepth) {
+		this.nodeDepth = nodeDepth;
+	}
+
+	/**
+	 * Used to insert a word into the tree, automatically creates the new
+	 * children nodes
+	 * 
+	 * @param word
+	 *            The word to insert
+	 */
+	public void insertWord(String word) {
+
+		// If we are not at the root then add the word to the current node
+		if (this.nodeDepth != 0)
+			words.add(word);
+
+		// Only continue if the word length is less than the length of the word
+		if (word.length() > nodeDepth) {
+			int charValue = ValueMaps.getLetterToNumValue(word.charAt(nodeDepth)) - 2;
+			// If the child is null then is need to be created
+			if (children[charValue] == null) {
+				children[charValue] = new MainNode(nodeDepth + 1);
+			}
+			// Recursive call to this function
+			children[charValue].insertWord(word);
+		}
+
+	}
+
+	/**
+	 * Gets the words from a given signature
+	 * 
+	 * @param sig
+	 *            The signature to get the words for
+	 * @return The collection of words that are at that node. Includes all its
+	 *         children
+	 * @throws WordNotFoundException
+	 *             Throws this if the signature os not in the data structure
+	 */
+	public Collection<String> getWordsFromSig(String sig) throws WordNotFoundException {
+		// If its empty then we need to stop recursion
+		if (sig.isEmpty()) {
+			// Trim the words for output
+			return trimWords(words);
+		} else {
+			int childNumber = Character.getNumericValue(sig.charAt(0)) - 2;
+			if (children[childNumber] != null) {
+				// Recall the method but with a string miss the first char
+				return children[childNumber].getWordsFromSig(sig.substring(1));
+			} else {
+				// This means that the node is null, so there are no words with
+				// that signature
+				throw new WordNotFoundException("Your word was not in the dictionary");
+			}
+
+		}
+
+	}
+
+	/**
+	 * Return the words at this node
+	 * 
+	 * @return The words at this node
+	 */
+	public Collection<String> getWords() {
+		return words;
+	}
+
+	/**
+	 * Return a child of this node
+	 * @param i
+	 *            The index of the child to get
+	 * @return The child from the given index
+	 */
+	public MainNode getChild(int i) {
+		return children[i];
+	}
+
+	/**
+	 * Trims a set of words
+	 * @param wordsToTrim
+	 * @return
+	 */
+	public Collection<String> trimWords(Collection<String> wordsToTrim) {
+		Collection<String> hashSet = new HashSet<String>();
+		for (String s : wordsToTrim) {
+			hashSet.add(s.substring(0, nodeDepth));
+		}
+		return hashSet;
+	}
+
+}

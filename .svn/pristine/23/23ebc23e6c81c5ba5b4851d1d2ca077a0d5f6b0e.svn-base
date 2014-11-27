@@ -1,0 +1,11 @@
+package predictivegui;
+
+import javax.swing.JPanel;
+
+public class PhoneButtons extends JPanel{
+
+	public PhoneButtons(PredictiveModel model) {
+		// TODO Auto-generated constructor stub
+	}
+
+}
